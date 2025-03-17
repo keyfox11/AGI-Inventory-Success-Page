@@ -1,12 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Success</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Log Status</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        .message-container {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .message {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>The scanned tool has successfully been logged in/out of the database.</h1>
+    <div class="message-container">
+        <p class="message">The scanned tool has successfully been logged in/out of the database.</p>
+    </div>
 </body>
 
 </html>
