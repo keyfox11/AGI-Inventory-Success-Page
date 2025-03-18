@@ -16,7 +16,6 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
-            flex-direction: column;
         }
 
         .message-container {
@@ -31,19 +30,11 @@
             font-weight: bold;
         }
 
-        .close-btn {
-            margin-top: 15px;
-            padding: 10px 20px;
+        .close-message {
+            margin-top: 10px;
             font-size: 18px;
-            color: white;
-            background: #e74c3c;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .close-btn:hover {
-            background: #c0392b;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
         }
     </style>
 </head>
@@ -51,8 +42,15 @@
 <body>
     <div class="message-container">
         <p class="message">The scanned tool has successfully been logged in/out of the database.</p>
-        <button class="close-btn" onclick="window.close()">Close Tab</button>
+        <p class="close-message" id="closeMessage">You may now close this tab.</p>
     </div>
+
+    <script>
+        // Show the close message after 3 seconds
+        setTimeout(() => {
+            document.getElementById("closeMessage").style.opacity = 1;
+        }, 500);
+    </script>
 </body>
 
 </html>
